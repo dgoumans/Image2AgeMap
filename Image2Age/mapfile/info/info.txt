@@ -1,0 +1,40 @@
+headerlenght (61 for scenariofile)
+tiny.aoscenario file (591 bytes) to int8 -stored as -> buffer
+
+                var header = buffer.slice(0, format.headerLength),              
+                    compressed = buffer.slice(format.headerLength);
+
+header is first 61 bytes, compressed is everything else after that (530 bytes)
+
+zlib.inflate(compressed, -15) ?
+
+index = uncompressed.indexOf(120,4449);
+length = 8+3*120*120
+
+
+MAP[]
+8+3*size*size
+array[120,0,0,0,120,0,0,0,terrain,height,zero,terrain,height,zero,......
+
+
+
+
+                var head = uncompressed.slice(0, index);
+
+                var map = generateMap(mapData);               
+
+                var foot = uncompressed.slice(index + length);
+
+
+                var together = new Uint8Array(head.byteLength + map.byteLength + foot.byteLength);
+                together.set(head);
+                together.set(map, head.byteLength);
+                together.set(foot, head.byteLength + map.byteLength);
+
+
+zlib deflate(together, {
+                    level: 9,
+                    windowBits: -15
+                });
+
+save as blob

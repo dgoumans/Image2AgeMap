@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image2Age", "Image2Age\Image2Age.csproj", "{34D2390C-A30A-4FC1-B4CE-1CA57E54E91D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34D2390C-A30A-4FC1-B4CE-1CA57E54E91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D2390C-A30A-4FC1-B4CE-1CA57E54E91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D2390C-A30A-4FC1-B4CE-1CA57E54E91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D2390C-A30A-4FC1-B4CE-1CA57E54E91D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCBE03EA-AE7E-4930-848A-E640D8B2D384}
+	EndGlobalSection
+EndGlobal
