@@ -17,9 +17,13 @@ namespace Image2Age
 
             for (int i=0; i < valueArray.Length; i++)
             {
-                map.Add(valueArray[i]);
+                map.Add(58);
                 map.Add(0);
                 map.Add(0);
+                map.Add(255);
+                map.Add(255);
+                map.Add(255);
+                map.Add(255);
             }
             return map.ToArray();
         }
@@ -47,9 +51,9 @@ namespace Image2Age
 
         private static Color[] ColorArray =
         {
-            Color.FromArgb(255, 0, 128, 255), // water
-            Color.FromArgb(255, 255, 250, 250), // snow
-            Color.FromArgb(255, 0, 255, 0)  // grass
+            Color.FromArgb(255, 101, 127, 180), // water
+            Color.FromArgb(255, 207, 171, 136), // desert
+            Color.FromArgb(255, 65, 133, 70)  // grass
         };
 
         private int GetClosestColorValue(Color baseColor)
@@ -58,20 +62,20 @@ namespace Image2Age
             var min = colors.Min(x => x.Diff);
             var closest = colors.Find(x => x.Diff == min).Value;
 
-           if(closest == Color.FromArgb(255, 0, 128, 255)) // water
+           if(closest == ColorArray[0]) // water
             {
-                return 58;
+                return 23;
             }
-            if (closest == Color.FromArgb(255, 255, 250, 250)) // snow
+            if (closest == ColorArray[1]) // dirt
             {
-                return 32;
+                return 23;
             }
 
-            if (closest == Color.FromArgb(255, 0, 255, 0))  // grass
+            if (closest == ColorArray[2])  // grass
             {
-                return 12;
+                return 23;
             }      
-            return 14; // desert
+            return 23; // desert
         }
 
         private int GetDiff(Color color, Color baseColor)
